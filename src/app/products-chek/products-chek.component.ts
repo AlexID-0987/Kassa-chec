@@ -13,7 +13,7 @@ import { Item } from '../Item';
 })
 export class ProductsChekComponent implements OnInit {
 itemcomp:Item[]=[]
-
+p: number = 1;
 
   constructor(private service:ProduktsService) { }
   

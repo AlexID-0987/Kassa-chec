@@ -11,7 +11,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let it of itemcomp">
+        <tr *ngFor="let it of itemcomp | paginate: { itemsPerPage: 5, currentPage: p }">
             <td>{{it.id}}</td>
             <td>{{it.products}}</td>
             <td>{{it.price}}</td>
@@ -25,7 +25,9 @@
     </tbody>
     
 </table>
-
+<div class="pag">
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
 </div>
 
 

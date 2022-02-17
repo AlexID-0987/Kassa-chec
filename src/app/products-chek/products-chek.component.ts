@@ -1,3 +1,6 @@
+
+import { HttpClient } from '@angular/common/http';
+import { debugOutputAstAsTypeScript } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 
 import { ProduktsService } from 'src/produkts.service';
@@ -10,7 +13,10 @@ import { Item } from '../Item';
 })
 export class ProductsChekComponent implements OnInit {
 itemcomp:Item[]=[]
+
+
   constructor(private service:ProduktsService) { }
+  
 
   ngOnInit(): void {
     this.getapi()
@@ -18,4 +24,7 @@ itemcomp:Item[]=[]
  getapi(){
    this.service.getitem().subscribe((a)=>console.warn(this.itemcomp=a))
  }
+ 
+
+
 }

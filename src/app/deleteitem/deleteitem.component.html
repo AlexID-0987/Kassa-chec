@@ -1,0 +1,20 @@
+<div name="form">
+    <div class="first" >
+        <button class="btn btn-danger" routerLink="/products">First page</button>
+        <div>
+            <div class="first">
+       <form class="form" #addform="ngForm" *ngIf="deletecomp">
+       <div>
+        <label for="prod">Product value: </label>
+        <input type="text" id="products" name="products" class="form-control"  [(ngModel)]="deletecomp.products" placeholder="Product">
+       </div>
+       <div>
+        <label for="price">Price value :</label>
+        <input type="number" id="price" name="price" class="form-control" [(ngModel)]="deletecomp.price"  placeholder="Price">
+       </div>
+       <div class="first">
+       <button type="button" class="btn btn-warning" (click)="delete(deletecomp.id)">Delete</button>
+      </div>
+   </form>
+   </div>
+   </div>

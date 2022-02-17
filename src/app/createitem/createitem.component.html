@@ -1,0 +1,16 @@
+<div class="first">
+<button class="btn btn-danger" routerLink="/products">First page</button>
+<div>
+<form class="form" #addform="ngForm" (ngSubmit)="additem(addform.value)">
+    <div>
+        <label for="prod">Product</label>
+        <input type="text" id="prod" name="prod" class="form-control" ngModel placeholder="Product">
+    </div>
+    <div>
+        <label for="price">Price</label>
+        <input type="number" id="price" name="price" class="form-control" ngModel placeholder="Price">
+    </div>
+    <div class="cr">
+        <button class="btn btn-danger">Add</button>
+    </div>
+</form>

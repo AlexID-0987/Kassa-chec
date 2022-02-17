@@ -3,17 +3,17 @@
     <button class="btn btn-danger" routerLink="/products">First page</button>
     <div>
         <div class="first">
-            <form class="form" #addform="ngForm" *ngIf="prod">
+            <form class="form" #addform="ngForm"  *ngIf="prod">
                 <div>
                     <label for="prod">Product value: <label id="lab">{{prod.products}}</label></label>
                     <input type="text" id="products" name="products" class="form-control"  [(ngModel)]="PROD" placeholder="Product">
                 </div>
                 <div>
-                    <label for="price">Price {{prod.price}}</label>
+                    <label for="price">Price: <label id="lab">{{prod.products}}</label></label>
                     <input type="number" id="price" name="price" class="form-control" [(ngModel)]="PRICE"  placeholder="Price">
                 </div>
                 <div class="first">
-                <button type="button" class="btn btn-warning" (click)="update(prod.id)">Update</button>
+                <button type="button" class="btn btn-warning" (click)="update(prod.id)" >Update</button>
                 </div>
             </form>
         </div>

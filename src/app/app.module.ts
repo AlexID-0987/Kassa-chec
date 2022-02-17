@@ -10,8 +10,6 @@ import { CreateitemComponent } from './createitem/createitem.component';
 import { UpdatecomponentComponent } from './updatecomponent/updatecomponent.component';
 import { DeleteitemComponent } from './deleteitem/deleteitem.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +24,12 @@ import { DeleteitemComponent } from './deleteitem/deleteitem.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    
+    
+    
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

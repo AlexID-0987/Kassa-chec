@@ -23,6 +23,7 @@ itemcomp:Item[]=[]
   }
  getapi(){
    this.service.getitem().subscribe((a)=>console.warn(this.itemcomp=a))
+   
  }
  
 

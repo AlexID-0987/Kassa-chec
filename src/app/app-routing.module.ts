@@ -6,6 +6,8 @@ import { ProductsChekComponent } from './products-chek/products-chek.component';
 import { UpdatecomponentComponent } from './updatecomponent/updatecomponent.component';
 
 
+
+
 const routes: Routes = [
   {path:'create', component:CreateitemComponent},
   {path:'products', component:ProductsChekComponent},

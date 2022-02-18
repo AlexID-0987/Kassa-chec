@@ -11,6 +11,10 @@ import { UpdatecomponentComponent } from './updatecomponent/updatecomponent.comp
 import { DeleteitemComponent } from './deleteitem/deleteitem.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { Ng2OrderModule } from 'ng2-order-pipe';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +23,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
     UpdatecomponentComponent,
     DeleteitemComponent,
     
+    
   
   ],
   imports: [
@@ -26,7 +31,10 @@ import {NgxPaginationModule} from 'ngx-pagination';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    Ng2SearchPipeModule,
+    Ng2OrderModule
+    
     
     
     

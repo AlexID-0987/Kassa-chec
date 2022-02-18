@@ -14,7 +14,9 @@ import { Item } from '../Item';
 export class ProductsChekComponent implements OnInit {
 itemcomp:Item[]=[]
 p: number = 1;
-
+products:any
+key:any ='id'
+reverse:boolean=false
   constructor(private service:ProduktsService) { }
   
 
@@ -26,6 +28,17 @@ p: number = 1;
    
  }
  
-
-
+Search(){
+  if(this.products==""){
+    this.getapi();
+  }else{
+    this.itemcomp=this.itemcomp.filter(rez=>{
+      return rez.products.toLocaleLowerCase().match(this.products.toLocaleLowerCase());
+    });
+  }
+}
+sort(key:any){
+  this.key=key;
+  this.reverse=!this.reverse
+}
 }

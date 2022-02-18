@@ -1,9 +1,13 @@
 
 <div class="cont">
+    <div class="sear">
+        Search : <input type="text" class="form-control" name="products" placeholder="Search item" [(ngModel)]="products" (ngModelChange)="Search()"/>
+    </div>
 <table class="table table-dark table-striped">
+    
     <thead>
         <tr>
-            <th>Id</th>
+            <th (click)="sort('id')"> Id&#8597;</th>
             <th>Products</th>
             <th>Price</th>
             <th>Update</th>
@@ -11,9 +15,9 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let it of itemcomp | paginate: { itemsPerPage: 5, currentPage: p }">
+        <tr *ngFor="let it of itemcomp | paginate: { itemsPerPage: 5, currentPage: p }|orderBy:key:reverse">
             <td>{{it.id}}</td>
-            <td>{{it.products}}</td>
+            <td>{{it.products }}</td>
             <td>{{it.price}}</td>
             <td>
                 <button type="button" class="btn btn-warning" routerLink="/update/{{it.id}}">UpdateComp</button>
